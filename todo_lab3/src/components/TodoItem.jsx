@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./TodoItem.css";
 
-function TodoItem({ todo, onRemove }) {
+function TodoItem({todo, onRemove}) {
   const [completed, setCompleted] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ function TodoItem({ todo, onRemove }) {
         onChange={() => setCompleted(!completed)}
       />
       <span style={{ textDecoration: completed ? 'line-through' : 'none' }}>
-        {todo.text}
+        {todo?.text??"Text"}
       </span>
       <button onClick={() => onRemove(todo.id)}>Delete</button>
     </li>

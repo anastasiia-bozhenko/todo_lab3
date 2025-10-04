@@ -20,7 +20,7 @@ function TodoList() {
       <AddTodoForm onAddTodo={addTodo} />
       <ul>
         {todos.map(todo => (
-          <TodoItem key={todo.id} todo={todo} onRemove={removeTodo} />
+          <TodoItem key={todo.id} todo={todo} onRemove={removeTodo} id={todo.id} />
         ))}
       </ul>
     </div>
